@@ -1,0 +1,13 @@
+# Application dependencies
+require:
+    - play
+    - provided -> owlapi 3.4.2
+    - provided -> hermit 1.0
+
+repositories: 
+    - provided: 
+        type:       local 
+        artifact:   "${application.path}/jar/[module]-[revision].jar" 
+        contains: 
+            - provided -> *
+

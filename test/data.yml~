@@ -1,0 +1,69 @@
+# you describe your data using the YAML notation here
+# and then load them using Fixtures.load("data.yml")
+
+Annotation(annotation1):
+   date: 2013-07-04
+   comment: "I agree with this subClass axiom"
+   evaluation: "yes"
+
+Annotation(annotation2):
+   date: 2013-06-04
+   comment: "I don't agree with this subClass axiom"
+   evaluation: "no"
+
+Annotation(annotation3):
+   date: 2013-06-04
+   comment: "I don't understand this subClass axiom"
+   evaluation: "dontknow"
+
+Axiom(axiom1):
+   subClassId: "http://semanticscience.org/resource/SIO_000012"
+   superClassId: "http://semanticscience.org/resource/SIO_000620"
+   subClassLabel: "organization"
+   subClassDescription: "An organization is a collective with a complex articulation of tasks, roles and responsibilities."
+   superClassLabel: "collective"
+   superClassDescription: "A collective is a group of entities that share or are motivated by at least one common issue or interest, or work together on a specific project(s) to achieve a common objective."
+   annotations:
+      - annotation1
+   numAgreement: 11
+   numDisagreement: 3
+   numDontKnow: 5
+
+Axiom(axiom2):
+   subClassId: "http://semanticscience.org/resource/SIO_000912"
+   superClassId: "http://semanticscience.org/resource/SIO_000090"
+   subClassLabel: "measurement scale"
+   subClassDescription: "A measurement scale is a functional specification that specifies an allowed range of categories or values."
+   superClassLabel: "specification"
+   superClassDescription: "A specification is a description of the essential technical attributes/requirements for an object or procedure, and may be used to determine that the object / procedure meets its requirements/attributes."
+   annotations:
+      - annotation2
+   numAgreement: 4
+   numDisagreement: 1
+   numDontKnow: 0
+
+Axiom(axiom3):
+   subClassId: "http://semanticscience.org/resource/SIO_010038"
+   superClassId: "http://semanticscience.org/ontology/SIO_011125"
+   subClassLabel: "drug"
+   subClassDescription: "A drug is a chemical entity that regulates a biological process."
+   superClassLabel: "molecule"
+   superClassDescription: "A molecule is the mereological maximal sum of a collection of covalently bonded atoms."
+   annotations:
+      - annotation3
+   numAgreement: 30
+   numDisagreement: 2
+   numDontKnow: 1
+
+User(jonathan):
+   email: jonathan@gmail.com
+   annotations:
+      - annotation1
+      - annotation2
+
+User(sam):
+   email: sam@gmail.com
+   annotations:
+      - annotation3
+
+

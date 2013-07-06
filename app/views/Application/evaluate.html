@@ -1,0 +1,47 @@
+#{extends 'main.html' /}
+#{set title:'evaluate' /}
+
+<div class="container">
+	<div class="masthead">
+	<img src="/public/images/logo.png"/>
+	<div class="navbar">
+	  <div class="navbar-inner">
+	    <div class="container">
+	      <ul class="nav">
+	        <li><a href="/">Home</a></li>
+	        <li class="active"><a href="/dashboard/">Dashboard</a></li>
+	        <li><a href="/about/">About</a></li>
+	      </ul>
+	    </div>
+	  </div>
+	</div><!-- /.navbar -->
+	</div><!-- masthead -->
+
+	<div class="container">
+		<h2>Do you agree that:</h2>
+		<div class="hero-unit">
+			<p><a href="${axiom.subClassId}" data-toggle="tooltip" title="${axiom.subClassDescription}">${axiom.subClassLabel}</a> is a type of <a href="${axiom.superClassId}" data-toggle="tooltip" title="${axiom.superClassDescription}">${axiom.superClassLabel}</a>.</p>
+		</div>
+	</div>
+	<div class="btn-group">
+		<button class="btn">Yes</button>
+		<button class="btn">No</button>
+		<button class="btn">I don't know</button>
+		<button class="btn">Comment</button>
+		<button class="btn btn-danger">Found an error</button>
+		<button class="btn btn-success">Get another axiom</button>
+	</div>
+	<div class="container">
+		<h5>Have a comment?</h5>
+		<textarea class="myspan" id="userComment"></textarea>
+	</div>
+	<div class="footer">
+  	  <p>&copy; SemanticTrilogy Hackathon 2013</p>
+	</div>
+</div>
+
+<script type="text/javascript">
+	$('.btn').click(function(){
+		location.reload();
+	});
+</script>

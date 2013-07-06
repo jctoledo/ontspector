@@ -1,0 +1,49 @@
+# you describe your data using the YAML notation here
+# and then load them using Fixtures.load("data.yml")
+
+Annotation(annotation1):
+   date: 2013-07-04
+   comment: "I agree with this subClass axiom"
+   evaluation: "yes"
+
+Annotation(annotation2):
+   date: 2013-06-04
+   comment: "I don't agree with this subClass axiom"
+   evaluation: "no"
+
+Annotation(annotation3):
+   date: 2013-06-04
+   comment: "I don't understand this subClass axiom"
+   evaluation: "dontknow"
+
+Axiom(axiom1):
+   subClassId: "sio:00001"
+   superClassId: "sio:00002"
+   annotations:
+      - annotation1
+
+Axiom(axiom2):
+   subClassId: "sio:00003"
+   superClassId: "sio:00002"
+   annotations:
+      - annotation2
+
+Axiom(axiom3):
+   subClassId: "sio:00005"
+   superClassId: "sio:00004"
+   annotations:
+      - annotation3
+
+User(jonathan):
+   email: jonathan@gmail.com
+   annotations:
+      - annotation1
+      - annotation2
+
+User(sam):
+   email: sam@gmail.com
+   annotations:
+      - annotation3
+
+
+

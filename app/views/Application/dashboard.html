@@ -1,0 +1,50 @@
+#{extends 'main.html' /}
+#{set title:'Dashboard' /}
+
+<div class="container">
+  <div class="masthead">
+	<img src="/public/images/logo.png"/>
+	<div class="navbar">
+	  <div class="navbar-inner">
+	    <div class="container">
+	      <ul class="nav">
+	        <li><a href="/">Home</a></li>
+          <li class="active"><a href="/dashboard/">Dashboard</a></li>
+	        <li><a href="#">About</a></li>
+	      </ul>
+	    </div>
+	  </div>
+	</div><!-- /.navbar -->
+	</div><!-- masthead -->
+
+	<div class="container">
+		<div class="myspan">
+			<h2>Select an Ontology:</h2>
+			<select id="ontology">
+			  <option value="sio">SIO</option>
+			</select>
+		</span>
+	</div>
+
+  <div class="row">
+    <div class="span4">
+      <h2>Evaluate a term</h2>
+      <p>Contribute to our evaluation process! </p>
+      <p><a class="btn btn-warning" href="/evaluate/">Go evaluate! &raquo;</a></p>
+    </div>
+    <div class="span4">
+      <h2>View Evaluation Statistics</h2>
+      <p>See how the community has annotated this ontology </p>
+      <p><a class="btn btn-warning" href="/metrics/">See stats  &raquo;</a></p>
+   </div>
+    <div class="span4">
+      <h2>Show my statistics</h2>
+      <p>See how <strong>you</strong> have contributed!</p>
+      <p><a class="btn btn-warning" href="/user/jose">See your contributions &raquo;</a></p>
+    </div>
+  </div>
+  <hr>
+   <div class="footer">
+    <p>&copy; SemanticTrilogy Hackathon 2013</p>
+  </div>
+</div><!-- container -->

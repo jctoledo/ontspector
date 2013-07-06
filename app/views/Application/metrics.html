@@ -1,0 +1,73 @@
+#{extends 'main.html' /}
+#{set title:'metrics' /}
+<div class="container">
+
+	<div class="masthead">
+	<img src="/public/images/logo.png"/>
+	<div class="navbar">
+	  <div class="navbar-inner">
+	    <div class="container">
+	      <ul class="nav">
+	        <li><a href="/">Home</a></li>
+	        <li class="active"><a href="/dashboard/">Dashboard</a></li>
+	        <li><a href="/about/">About</a></li>
+	      </ul>
+	    </div>
+	  </div>
+	</div><!-- /.navbar -->
+	</div><!-- masthead -->
+	
+	<div class="container">
+		<table class="table table-striped myspan" >
+			<caption><h2>Compiled evaluation Results</h2></caption>
+			<thead>
+				<tr>
+					<th>Axiom label</th>
+					<th># of agreements</th>
+					<th># of disagreements</th>
+					<th># of I don't knows</th>
+				</tr>
+			</thead>
+			<tbody>
+			
+			#{list items:axioms, as:'axiom'}
+				<tr>
+					<td><a href="${axiom.subClassId}">${axiom.subClassLabel}</a> is a <a href="${axiom.superClassId}">${axiom.superClassLabel}</a></td>
+					<td>${axiom.numAgreement}</td>
+					<td>${axiom.numDisagreement}</td>
+					<td>${axiom.numDontKnow}</td>
+				</tr>
+			#{/list}
+			</tbody>
+		</table>
+	</div>
+	<div class="container">
+		<table class="table table-striped myspan" >
+			<caption><h2>Top Contributors</h2></caption>
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>email</th>
+					<th># of contributions</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Bat man</td>
+					<td>batman@email.com</td>
+					<td>4323</td>
+				</tr>
+				<tr>
+					<td>Tim Horton</td>
+					<td>tim@email.com</td>
+					<td>2312</td>
+				</tr>
+				<tr>
+					<td>George Bush</td>
+					<td>george@email.com</td>
+					<td>3</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
